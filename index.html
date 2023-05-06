@@ -1,0 +1,86 @@
+<!-- HTML Document -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Jost:wght@500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/b47d866799.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <title>WeatherCast - Your Personal Weather Assistant</title>
+</head>
+
+<body>
+
+    <!-- Main Container -->
+    <div class="container-fluid main-div">
+
+        <!-- Landing Info -->
+        <div class="landing-info text-center">
+            <h4>Explore weather conditions by searching for a city.</h4>
+        </div>
+
+        <!-- Inner Container -->
+        <div class="container">
+
+            <!-- City Section -->
+            <div class="d-flex justify-content-between">
+                <div class="d-flex city"></div>
+
+                <!-- Search Form -->
+                <form onsubmit="hideInputField(); clearInputField();">
+                    <input class="mt-2 " type="text" id="searchInput" style="display: none;">
+                </form>
+
+                <!-- Search Button -->
+                <i class="fa-solid fa-magnifying-glass mt-3 ms-2" id="search-button" type="button"
+                    onclick="showInputField()"></i>
+            </div>
+
+            <!-- Temperature Section -->
+            <div class="temp"></div>
+
+            <!-- Weather Details Section -->
+            <div class="weather text-center">
+                <div class="weather-details text-center"></div>
+                <div class="week-forecast text-center px-3"></div>
+                <div class="buttons mb-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="index.js"></script>
+
+</body>
+
+</html>

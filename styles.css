@@ -1,0 +1,100 @@
+body {
+  background: #010409;
+  background-image: url("images/backgroundImg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* on loading page this info will be shown */
+
+.landing-info {
+  color: #333333;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.degree {
+  margin-top: -2%;
+  font-size: 8rem;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+
+
+.city {
+  padding: 5% 1% 0;
+  opacity: 0.75;
+}
+
+.city h1 {
+  font-size: 1.15rem;
+  padding-left: 1.5%;
+}
+
+.city i {
+  font-size: 1.3rem;
+}
+
+/* weather details and forecast details */
+
+.weather {
+  background: rgba(0, 0, 0, .5);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2%;
+  overflow: auto;
+  color: #fff;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+
+}
+
+.weather-details h5 {
+  margin-top: 2%;
+  font-family: 'DM Sans', sans-serif;
+  opacity: 0.9;
+}
+
+form {
+  opacity: 0.9;
+}
+
+input[type="text"] {
+  margin-left: 65%;
+  width: 60%;
+  color: white;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
+
+/* weather detail and forecast buttons */
+
+.buttons {
+  margin: auto;
+  border-radius: 25px;
+  background: #211f2d;
+  width: 40%;
+  padding: 2% 5%;
+}
+
+
+
+.buttons i {
+  font-size: 1.2rem;
+}
