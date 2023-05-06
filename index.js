@@ -1,9 +1,10 @@
 // input city
 $("form").submit(async (e) => {
     e.preventDefault();
-    const cityName = $("input").val()
+    const cityName = $('#searchInput').val();
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=c8193b9285ee3a8d49d0b678b6937cac&units=metric`);
     const data = await response.json();
+    
     weatherForecast = getDailyForecast(data.name);
     $(".landing-info").hide();
     displayData(data, weatherForecast);
@@ -13,6 +14,7 @@ $("form").submit(async (e) => {
 
 // to get week forecast
 const getDailyForecast = async (city) => {
+    console.log(city)
     const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=c8193b9285ee3a8d49d0b678b6937cac&units=metric`);
     const weatherData = await response.json();
     // Create an object to store the grouped data
@@ -55,12 +57,14 @@ const displayData = async (data, weatherForecast) => {
     $(".city").html(
         `
         <i class="fa-sharp fa-solid fa-location-dot"></i>
-        <h1 class="ms-2">${city}</h1>
+        <h1 class="ms-2" >${city}</h1>
+        
       `
     );
     $(".temp").html(
         `
         <h1 class="degree">${temperature}°</h1>
+        <h5 class="ms-2 clouds-details"">${data.weather[0].main}</h6>
         `
     )
 
@@ -139,6 +143,7 @@ function showInputField() {
 
 function hideInputField() {
     document.getElementById("searchInput").style.display = "none";
+   
 }
 
 function showWeatherDetails() {
@@ -149,9 +154,4 @@ function showWeatherDetails() {
 function showWeekForecast() {
     $(".week-forecast").show();
     $(".weather-details").hide();
-}
-
-// clear input field after search
-function clearInputField() {
-    document.getElementById("searchInput").value = "";
 }

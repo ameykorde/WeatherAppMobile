@@ -98,3 +98,12 @@ input[type="text"] {
 .buttons i {
   font-size: 1.2rem;
 }
+
+.clouds-details{
+  margin-bottom: -10% !important;
+  margin-left: 5% !important;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgb(216, 207, 207));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
