@@ -131,7 +131,6 @@ const displayData = async (data, weatherForecast) => {
         </div>
             `)
     }
-    // $(".weather-details").hide();
 
 }
 
